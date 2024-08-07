@@ -7,9 +7,11 @@ class WallServiceTest {
 
     @Test
     fun add() {
-        var lastId = 0
-        val result = ++lastId
-        assertEquals(1, result)
+        val likes = Likes()
+        val comments = Comments()
+        WallService.add(Post(1, 1, Date(), "Hi", 0, likes, comments, 2,135,true))
+        val result = Post(1, 2, Date(), "Hi", 0, likes, comments, 2, 135, true)
+        assertEquals(1, result.id)
     }
 
     @Test
