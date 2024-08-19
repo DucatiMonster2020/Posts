@@ -14,8 +14,7 @@ class WallServiceTest {
     fun add() {
         val likes = Likes()
         val comments = Comments()
-        WallService.add(Post(1, 1, Date(), "Hi", 0, likes, comments, 2,135,true))
-        val result = Post(1, 2, Date(), "Hi", 0, likes, comments, 2, 135, true)
+        val result = WallService.add(Post(1, 1, Date(), "Hi", 0, likes, comments, 2, 135, true))
         assertEquals(1, result.id)
     }
 

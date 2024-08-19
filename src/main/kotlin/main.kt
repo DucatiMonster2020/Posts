@@ -20,7 +20,6 @@ data class Comments(var countComments: Int = 0)
 object WallService {
 
     private var posts = emptyArray<Post>()
-
     fun clear() {
         posts = emptyArray()
         lastId = 0
@@ -31,7 +30,6 @@ object WallService {
         posts += post.copy(id = ++lastId, likes = post.likes?.copy())
         return posts.last()
     }
-
     fun update(newPost: Post): Boolean {
         for ((index, post) in posts.withIndex()) {
             if (post.id == newPost.id) {
@@ -41,7 +39,6 @@ object WallService {
         }
         return false
     }
-
     fun printPost() {
         for (post in posts) {
             print(post)
