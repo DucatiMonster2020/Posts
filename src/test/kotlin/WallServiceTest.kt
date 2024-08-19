@@ -1,12 +1,11 @@
-import org.junit.Before
 import org.junit.jupiter.api.Test
-
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.BeforeEach
 import java.util.*
 
 class WallServiceTest {
 
-    @Before
+    @BeforeEach
     fun clearBeforeTest() {
         WallService.clear()
     }
