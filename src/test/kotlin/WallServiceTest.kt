@@ -1,3 +1,4 @@
+import org.junit.Before
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
@@ -5,6 +6,10 @@ import java.util.*
 
 class WallServiceTest {
 
+    @Before
+    fun clearBeforeTest() {
+        WallService.clear()
+    }
     @Test
     fun add() {
         val likes = Likes()

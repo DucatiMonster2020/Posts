@@ -20,6 +20,11 @@ data class Comments(var countComments: Int = 0)
 object WallService {
 
     private var posts = emptyArray<Post>()
+
+    fun clear() {
+        posts = emptyArray()
+        lastId = 0
+    }
     private var lastId = 0
 
     fun add(post: Post): Post {
